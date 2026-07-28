@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "paths": {
+    "raw_root": "${OCD_RAW_ROOT}",
+    "artifact_root": "${OCD_ARTIFACT_ROOT}",
+    "private_mapping_root": "${OCD_PRIVATE_MAPPING_ROOT}"
+  },
+  "dataset": {
+    "groups": [
+      {
+        "directory": "control",
+        "label_name": "control",
+        "label_id": 0
+      },
+      {
+        "directory": "self_reporting_ocd",
+        "label_name": "self_reported_ocd",
+        "label_id": 1
+      }
+    ],
+    "keywords": [
+      "ocd",
+      "\u5f3a\u8feb\u75c7",
+      "\u5f3a\u8feb\u969c\u788d",
+      "\u5f3a\u8feb\u884c\u4e3a",
+      "\u5f3a\u8feb\u601d\u7ef4",
+      "\u5f37\u8feb\u75c7",
+      "\u5f37\u8feb\u969c\u7919",
+      "\u5f37\u8feb\u884c\u70ba",
+      "\u5f37\u8feb\u601d\u7dad"
+    ],
+    "keyword_mask": "[MASK]",
+    "post_selection": {
+      "maximum_posts_per_subject": 64,
+      "strategy": "most_recent"
+    }
+  },
+  "evaluation": {
+    "outer_folds": 5,
+    "split_seed": 20260730,
+    "validation_fraction_within_outer_train": 0.125,
+    "classification_threshold": 0.5
+  }
+}

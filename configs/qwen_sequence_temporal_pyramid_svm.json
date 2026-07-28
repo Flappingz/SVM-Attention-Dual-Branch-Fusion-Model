@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "encoder": {
+    "model_id": "Qwen/Qwen3-VL-Embedding-2B",
+    "revision": "df0de7617d1dcc3bc263f1ff3c3aa27e4172ba8f",
+    "representation": "final",
+    "embedding_dimension": 2048,
+    "normalize": true,
+    "frozen": true
+  },
+  "sequence_pooling": {
+    "method": "temporal_pyramid2",
+    "chronological_blocks": [
+      "global_mean",
+      "early_half_mean",
+      "late_half_mean"
+    ],
+    "block_normalization": "l2",
+    "final_normalization": "l2"
+  },
+  "classifier": {
+    "estimator": "linear_svc",
+    "c": 1.0,
+    "loss": "squared_hinge",
+    "class_weight": null,
+    "tolerance": 0.0001,
+    "maximum_iterations": 10000,
+    "random_state": 42
+  }
+}

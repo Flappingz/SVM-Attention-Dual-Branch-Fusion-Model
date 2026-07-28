@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "encoder": {
+    "model_id": "Qwen/Qwen3-VL-Embedding-2B",
+    "model_name_or_path": "${QWEN3_VL_EMBEDDING_MODEL}",
+    "revision": "df0de7617d1dcc3bc263f1ff3c3aa27e4172ba8f",
+    "representations": ["final"],
+    "normalize": true,
+    "instruction": "Represent this Weibo post.",
+    "torch_dtype": "bfloat16",
+    "device": "auto",
+    "max_length": 65536,
+    "min_pixels": 4096,
+    "max_pixels": 32768,
+    "total_pixels": 65536,
+    "fps": 1.0,
+    "max_frames": 2,
+    "max_images_per_post": 6,
+    "max_dynamic_media_per_post": 6
+  },
+  "model": {
+    "d_model": 256,
+    "post_attention_heads": 2,
+    "user_attention_heads": 2,
+    "attention_inner_dim": 64,
+    "user_position_encoding": "none",
+    "ffn_hidden_dim": 128,
+    "classifier_hidden_dim": 128,
+    "raw_mean_skip_dim": 128,
+    "dropout": 0.5,
+    "user_pooling": "mean",
+    "architecture_variant": "without_post_cross_attention"
+  },
+  "training": {
+    "epochs": 40,
+    "batch_size": 16,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "early_stopping_patience": 6,
+    "selection_metric": "loss",
+    "seed": 42,
+    "num_workers": 0
+  }
+}

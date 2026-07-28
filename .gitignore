@@ -1,0 +1,50 @@
+/.coverage
+/.env
+/.env.*
+/.mypy_cache/
+/.pytest_cache/
+/.ruff_cache/
+/.venv/
+__pycache__/
+*.egg-info/
+*.py[cod]
+/htmlcov/
+/tmp/
+/venv/
+
+# Local configuration and all research artifacts are private by default.
+# Every artifact directory is root-anchored so source directories such as
+# src/ocd_v3/data/ are never ignored accidentally.
+/configs/*.local.json
+/artifacts/
+/checkpoints/
+/data/
+/datasets/
+/features/
+/identity-mappings/
+/private/
+/private-mappings/
+/predictions/
+/raw/
+/runs/
+/splits/
+/*.ckpt
+/*.csv
+/*.feather
+/*.h5
+/*.hdf5
+/*.jsonl
+/*.npy
+/*.npz
+/*.parquet
+/*.pkl
+/*.pickle
+/*.pt
+/*.pth
+/*.tsv
+
+# Editor and OS files.
+/.idea/
+/.vscode/
+/.DS_Store
+/Thumbs.db

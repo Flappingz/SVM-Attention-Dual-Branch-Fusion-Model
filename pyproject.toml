@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocd-risk-signal-research"
+version = "1.0.0"
+description = "User-level multimodal OCD risk-signal research pipeline"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Yefan Zhang" }]
+requires-python = ">=3.12"
+keywords = ["multimodal-learning", "mental-health", "social-media", "user-modeling"]
+dependencies = [
+  "numpy==2.4.2",
+  "scikit-learn==1.8.0",
+]
+
+[project.optional-dependencies]
+deep = [
+  "torch==2.8.0",
+  "transformers==4.57.3",
+  "Pillow==12.2.0",
+  "qwen-vl-utils==0.0.14",
+  "safetensors==0.8.0",
+  "av==18.0.0",
+]
+dev = ["pytest==9.0.2", "ruff==0.14.8"]
+
+[project.scripts]
+ocd-v3 = "ocd_v3.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Flappingz/SVM-Attention-Dual-Branch-Fusion-Model"
+Issues = "https://github.com/Flappingz/SVM-Attention-Dual-Branch-Fusion-Model/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

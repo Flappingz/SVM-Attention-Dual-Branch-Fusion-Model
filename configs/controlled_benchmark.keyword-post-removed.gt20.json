@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "expected_dataset_id": null,
+  "keyword_condition": "removed",
+  "cohort": {
+    "field": "available_post_count",
+    "operator": ">",
+    "threshold": 20
+  },
+  "splits": {
+    "seeds": [42, 43, 44, 45, 46, 47, 48, 49],
+    "outer_folds": 5,
+    "validation_fraction_within_outer_train": 0.125
+  },
+  "training_base_seed": 42,
+  "classification_threshold": 0.5,
+  "primary_metric": "f1",
+  "secondary_metrics": ["roc_auc", "accuracy", "precision", "recall"],
+  "models": [
+    "tfidf_linear_svm",
+    "chinese_roberta_mean_logistic",
+    "qwen_vl_mean_mlp",
+    "hierarchical_attention_full"
+  ]
+}

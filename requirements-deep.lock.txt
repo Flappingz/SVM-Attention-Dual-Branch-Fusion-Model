@@ -1,0 +1,15 @@
+# Reference experiment environment (Python 3.12).
+# This records direct package versions only; it is not a complete transitive lock
+# file and does not include package hashes.
+# Install the matching CUDA-enabled torch build from the official PyTorch index
+# before this file when reproducing GPU runs; use torch==2.8.0+cu128 there.
+numpy==2.4.2
+scikit-learn==1.8.0
+torch==2.8.0
+transformers==4.57.3
+Pillow==12.2.0
+qwen-vl-utils==0.0.14
+safetensors==0.8.0
+av==18.0.0
+pytest==9.0.2
+ruff==0.14.8

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+type: software
+message: "If you use this code, please cite the accompanying paper."
+title: "Multimodal OCD Risk Identification on Chinese Social Media Using Vision--Language Embeddings"
+version: 1.0.0
+date-released: 2026-07-28
+license: MIT
+repository-code: "https://github.com/Flappingz/SVM-Attention-Dual-Branch-Fusion-Model"
+authors:
+  - family-names: Zhang
+    given-names: Yefan
+  - family-names: Xie
+    given-names: Zhenzhen
+  - family-names: Liu
+    given-names: Hongyu
+  - family-names: Liu
+    given-names: Jiaxuan
+  - family-names: Wu
+    given-names: Xinghan
+  - family-names: Guo
+    given-names: Xitong
+preferred-citation:
+  type: conference-paper
+  title: "Multimodal OCD Risk Identification on Chinese Social Media Using Vision--Language Embeddings"
+  authors:
+    - family-names: Zhang
+      given-names: Yefan
+    - family-names: Xie
+      given-names: Zhenzhen
+    - family-names: Liu
+      given-names: Hongyu
+    - family-names: Liu
+      given-names: Jiaxuan
+    - family-names: Wu
+      given-names: Xinghan
+    - family-names: Guo
+      given-names: Xitong
+  year: 2026
+  collection-title: "EAI PervasiveHealth 2026"
